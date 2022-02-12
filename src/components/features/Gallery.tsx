@@ -9,7 +9,6 @@ export interface GalleryProps {
 }
 
 export const Gallery: React.FC<GalleryProps> = ({ cats, isGalleryLoading }) => {
-
     return (
         <Box sx={{flexGrow: 1, margin: 2}}>
             {
@@ -17,7 +16,7 @@ export const Gallery: React.FC<GalleryProps> = ({ cats, isGalleryLoading }) => {
                     ? <CircularProgress/>
                     : <Grid container direction="row" spacing={2}>
                         { cats.map(cat =>
-                            <Grid item key={cat.id} xs={10} md={6} lg={4} xl={2}>
+                            <Grid item key={cat.id} xs={12} md={6} lg={4} xl={2}>
                                 <GalleryImageCard cat={cat}/>
                             </Grid>)
                         }

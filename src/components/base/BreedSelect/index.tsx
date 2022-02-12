@@ -30,11 +30,11 @@ const BreedSelect: React.FC<BreedSelectProps> = ({breeds, onSelectBreed, areBree
     const defaultText = areBreedsLoading ? 'Loading...' : 'Select Breed'
     const defaultValue = queryParamValue ?? 'sel'
 
-    return <FormControl sx={{ m: 1, minWidth: 200 }}>
+    return <FormControl sx={styles.formControl}>
         <Select
             variant="standard"
             defaultValue={defaultValue}
-            sx={styles}
+            sx={styles.select}
             onChange={handleChange}
         >
             { <MenuItem key={defaultValue} value={defaultValue}> {defaultText} </MenuItem> }

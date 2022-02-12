@@ -1,18 +1,31 @@
 const BreedSelectStyles = {
-    '& .MuiSelect-standard': {
-        color: 'white',
+    formControl: {
+      m: 1,
+      minWidth: {
+          xs: 120,
+          md: 200,
+      }
     },
-    ':after': {
-        borderBottomColor: '#fe77ff',
-    },
-    ':hover:not(.Mui-disabled):before': {
-        borderBottomColor: '#510b66',
-    },
-    ':before': {
-        borderBottomColor: '##510b66',
-    },
-    '& .MuiSelect-icon': {
-        color: '#6d008f'
+    select: {
+        '& .MuiSelect-standard': {
+            color: 'white',
+            fontSize: {
+                xs: 12,
+                md: 18
+            }
+        },
+        ':after': {
+            borderBottomColor: '#fe77ff',
+        },
+        ':hover:not(.Mui-disabled):before': {
+            borderBottomColor: '#510b66',
+        },
+        ':before': {
+            borderBottomColor: '##510b66',
+        },
+        '& .MuiSelect-icon': {
+            color: '#6d008f'
+        }
     }
 }
 

@@ -10,7 +10,11 @@ const appBarStyles = {
     },
     title: {
         fontFamily: "'Press Start 2P'",
-        fontSize: 'calc(10px + 2vmin)',
+        marginTop: 0.5,
+        fontSize: {
+            md: 'calc(10px + 2vmin)',
+            xs: 16
+        }
     },
 }
 

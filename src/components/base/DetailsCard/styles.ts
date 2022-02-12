@@ -9,9 +9,10 @@ const DetailsCardStyles = {
         width: '100%',
         height: '100%',
         '& img': {
-            objectFit: 'cover',
+            objectFit: 'fit',
             height: '100%',
-            width: '100%'
+            width: '100%',
+            maxHeight: 600
         },
     },
     skeletonImage: {backgroundColor: '#D3D3D3', width: '100%', height: '100%'},
@@ -23,7 +24,33 @@ const DetailsCardStyles = {
     typography: {
         margin: 4,
         '& .MuiTypography-root': {
-            textAlign: 'left'
+            textAlign: 'left',
+            fontSize: {
+                xs: 12,
+                md: 15,
+                lg: 18,
+            },
+        },
+        "& .MuiTypography-h4": {
+            fontSize: {
+                xs: 24,
+                md: 26,
+                lg: 28,
+            },
+        },
+        "& .MuiTypography-h5": {
+            fontSize: {
+                xs: 18,
+                md: 21,
+                lg: 24,
+            },
+        },
+        "& .MuiTypography-h6": {
+            fontSize: {
+                xs: 15,
+                md: 18,
+                lg: 21,
+            },
         }
     }
 }
