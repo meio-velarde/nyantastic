@@ -5,7 +5,7 @@ import StorageProvider, { breedStorageKey, catStorageKey } from '../../util/stor
 import useQueryParam from '../hooks/useQueryParam'
 import React, {useCallback, useState} from 'react'
 import useFindAllBreeds from '../hooks/useFindAllBreeds'
-import useFetchCatsForBreed from '../hooks/useFetchCatsForBreed'
+import useFindCatsForBreed from '../hooks/useFindCatsForBreed'
 import TopBar from '../features/TopBar'
 import ApiAlert from '../base/ApiAlert'
 import findBreedsErrorMessage from '../../util/constants/findBreedsErrorMessage'
@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({storageProvider}) => {
         response: cats,
         loadMore,
         isEndOfPage,
-    } = useFetchCatsForBreed(currentBreedId, catStorage)
+    } = useFindCatsForBreed(currentBreedId, catStorage)
 
     const handleSelectBreed = useCallback(
         (id) => {

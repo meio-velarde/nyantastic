@@ -15,7 +15,7 @@ interface FetchCatsForBreedResult {
 /**
  * React hook that searches a breed through the data storage class
  */
-const useFetchCatsForBreed = (breedId: string | null, catStorage: CatStorage): FetchCatsForBreedResult => {
+const useFindCatsForBreed = (breedId: string | null, catStorage: CatStorage): FetchCatsForBreedResult => {
     const [isLoading, setLoading] = useState(false)
     const [isEndOfPage, setIsEndOfPage] = useState(false)
     const [page, setPage] = useState(0)
@@ -29,7 +29,7 @@ const useFetchCatsForBreed = (breedId: string | null, catStorage: CatStorage): F
         breedId,
     ])
 
-    const fetchCatsForBreed = useCallback(() => {
+    const findCatsForBreed = useCallback(() => {
         setLoading(true)
 
         if(wasIdChanged) {
@@ -59,17 +59,17 @@ const useFetchCatsForBreed = (breedId: string | null, catStorage: CatStorage): F
         const shouldFetch = breedId && wasIdChanged
 
         if (shouldFetch) {
-            fetchCatsForBreed()
+            findCatsForBreed()
         }
 
     }, [
         breedId,
-        fetchCatsForBreed,
+        findCatsForBreed,
         wasIdChanged
         ]
     )
 
-    return { isLoading, error, response, loadMore: fetchCatsForBreed, isEndOfPage }
+    return { isLoading, error, response, loadMore: findCatsForBreed, isEndOfPage }
 }
 
-export default useFetchCatsForBreed
+export default useFindCatsForBreed
