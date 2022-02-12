@@ -1,7 +1,7 @@
 # Nyantastic!
 Welcome to Nyantastic! The Nyantastic cat browser! NYAN!
 
-Demo: 
+Demo: https://distracted-heyrovsky-9bacd2.netlify.app/
 
 # Getting Started with Create React App
 
